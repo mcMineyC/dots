@@ -11,7 +11,7 @@
     :windowtype "dock"
     :wm-ignore false
     (box
-        :class "center-window foobar"
+        :class "center-window"
         :orientation "v"
         :space-evenly false
         (box

@@ -1,3 +1,20 @@
+(defwindow bar-blur
+    :namespace ""
+    :monitor 0
+    :geometry (geometry :x "0px"
+                        :y "-41px"
+                        :height "47px"
+                        :width  "1920px"
+                        :anchor "top center")
+    :exclusive false
+    :stacking "fg"
+    :windowtype "normal"
+    :wm-ignore false
+    (box
+        :class "bar-blur"
+    )
+)
+
 (defwindow bar-left
     :namespace ""
     :monitor 0
