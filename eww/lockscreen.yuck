@@ -1,0 +1,15 @@
+(defwindow lockscreen
+    :monitor 0
+    :geometry (geometry :x "0px"
+                        :y "-400px"
+                        :width "100%"
+                        :height "100%"
+                        :anchor "center")
+    :stacking "fg"
+    :windowtype "dock"
+    :wm-ignore false
+    (box
+        :halign "none"
+        :class "lockscreen"
+    )
+)

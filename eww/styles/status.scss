@@ -1,0 +1,58 @@
+.status-layout-box {
+  // font-family: Phosphor, Koulen;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 5em;
+  color: $text;
+}
+
+/*.status-net-box,
+.status-bat-box,
+.status-tm-box {
+  label {
+    font-size: 2em;
+  }
+}*/
+
+.status-close-btn {
+  font-size: 2em;
+  &:hover {
+    color: $surface-red;
+  }
+}
+
+.status-btns-box {
+  font-size: 2.5em;
+
+  button {
+    padding: 0.4em;
+    border-radius: 0.1em;
+    background-color: rgba($surface-darkgrey, 0.3);
+
+    &:hover {
+      transition: 200ms linear background-color, border-radius;
+      background-color: rgba($surface-lightgrey, 0.6);
+    }
+
+    &:first-child {
+      color: rgba($surface-red, 0.8);
+    }
+  }
+}
+
+.status-sep {
+  font-size: 1.5em;
+  padding-top: 0.15em;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  color: $surface-lightgrey;
+}
+
+.status-sundial-lbl {
+  font-size: 1.5em;
+  font-weight: bold;
+  border-radius: 0.2em;
+  padding: 0.4em;
+  padding-bottom: 0.5em;
+  // font-family: "Poiret One";
+}

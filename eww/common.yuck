@@ -1,0 +1,71 @@
+; VARIABLES
+(defpoll time :interval "5s"
+  :initial `date +'{"hour":"%H","min":"%M"}'`
+  `date +'{"hour":"%H","min":"%M"}'`)
+
+(defpoll timer :interval "5s"
+  :initial `date +'{"hour":"%-I","min":"%M"}'`
+  `date +'{"hour":"%-I","min":"%M"}'`)
+
+; (defpoll net :interval "100s"
+  ; :initial `N/A`
+  ; `nmcli -t -f SIGNAL,ACTIVE device wifi \
+    ; | awk -F':' '{if($2=="yes")print$1}'`)
+
+(defpoll btcon :interval "1s"
+  `~/.config/eww/scripts/btctl-connected`)
+
+(defpoll wifi :interval "1s"
+  `~/.local/bin/nmcli-info`)
+
+(defpoll center_open :interval "2s"
+  :initial `eww windows | grep -o "*center"`
+  `eww windows | grep -o "*center" && echo "true"`)
+
+(defpoll rfkill :interval "500ms"
+                :initial `rfkill -J`
+  `rfkill -Jo DEVICE,SOFT`)
+
+
+(defwidget iconbutton [name sizeh sizew class onclick]
+  (eventbox
+    :onclick onclick
+    :class class
+    :width sizew
+    :height sizeh
+    (image
+      :path "./icons/ic_fluent_${name}_24_regular.svg"
+      :image-width sizew
+      :image-height sizeh
+    )
+  )
+)
+
+(defwidget icontile [name class onclick status]
+  (box
+    :class "tile-padding"
+    (iconbutton
+      :name name
+      :sizew 60
+      :sizeh 28
+      :class "button-module quicktoggle-${status ? 'enabled' : 'disabled'}"
+      :onclick onclick
+    )
+  )
+)
+
+(defwidget textile [text class onclick status]
+  (box
+    :class "tile-padding textqt"
+    (eventbox
+      :onclick onclick
+      :class class
+      :width 60
+      :height 28
+      :class "quicktoggle-${status ? 'enabled' : 'disabled'} ${class}"
+      (label
+        :text text
+      )
+    )
+  )
+)

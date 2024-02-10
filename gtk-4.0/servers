@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="smb://jedi-precise-thing.local/" added="2023-12-24T22:03:37.800196Z" modified="2024-01-02T07:03:53.344814Z" visited="2024-01-02T07:03:53.344812Z">
+    <title>Windows shares on jedi-precise-thing.local</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2024-01-02T07:03:53.344813Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="smb://jedi-precise-thing.local/main/" added="2024-01-03T00:40:22.784478Z" modified="2024-01-03T00:40:22.784509Z" visited="2024-01-03T00:40:22.784488Z">
+    <title>main on jedi-precise-thing.local</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2024-01-03T00:40:22.784496Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="smb://jedi-precise-thing.local/config/" added="2024-01-03T00:40:45.179914Z" modified="2024-01-03T00:40:45.179927Z" visited="2024-01-03T00:40:45.179921Z">
+    <title>config on jedi-precise-thing.local</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2024-01-03T00:40:45.179924Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

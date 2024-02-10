@@ -1,0 +1,71 @@
+(defwindow center
+    :namespace ""
+    :monitor 0
+    :geometry (geometry :x "6px"
+                        :y "-35px"
+                        :width "33%"
+                        :height "42%"
+                        :anchor "top center")
+    :exclusive false
+    :stacking "fg"
+    :windowtype "dock"
+    :wm-ignore false
+    (box
+        :class "center-window foobar"
+        :orientation "v"
+        :space-evenly false
+        (box
+            :class "center-window-module"
+            :height 35
+            (box
+                :class "center-window-start-module"
+                :space-evenly false
+                :orientation "h"
+                (icontile
+                    :name "wifi_1"
+                    :class ""
+                    :onclick "rfkill toggle wifi"
+                    :status {rfkill.rfkilldevices[3].soft == 'unblocked'}
+                )
+                (icontile
+                    :name "${btcon > 0 ? 'bluetooth_connected' : 'bluetooth'}"
+                    :class ""
+                    :onclick "rfkill toggle bluetooth"
+                    :status {rfkill.rfkilldevices[2].soft == 'unblocked'}
+                )
+                (icontile
+                    :name "cellular_5g"
+                    :class ""
+                    :onclick "bash ~/.local/bin/hotspot"
+                    :status {(wifi['ssid'] ?: "NONE") == "Wifi"}
+                )
+                (textile
+                    :class ""
+                    :onclick "bash -c 'notify-send -i ~/.local/bin/rickroll.png  \"$(~/.local/bin/rickroll)\" && cvlc --play-and-exit --audio ~/Videos/clip.mp4 --no-video &'" 
+                    :status false
+                    :text "MURP"
+                )
+                (box
+                    :class "tile-padding"
+                    :style "min-width: 200px"
+                    (eventbox
+                        (box
+                            :orientation "v"
+                            :class "textqt"
+                            (label
+                                :text "Acheivement unlocked:"
+                            )
+                            (label
+                                :text "It works on my machine"
+                            )
+                        )
+                    )
+                )
+            )
+        )
+        (box
+            :vexpand true
+            :class "center-window-module"
+        )
+    )
+)

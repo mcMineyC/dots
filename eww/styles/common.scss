@@ -1,0 +1,36 @@
+.bg{
+    background-color: $bg;
+}
+.t{
+    background-color: $t;
+}
+.accent{
+    background-color: $accent;
+}
+
+.lockscreen{
+    background-image: url("/home/jedi/Downloads/monterey.webp");
+    background-size: 100% 100%;
+}
+
+.quicktoggle-enabled{
+    background-color: $button-enabled;
+}
+
+
+.quicktoggle-disabled{
+    background-color: $button-disabled;
+}
+
+.window {
+    background-color: $bg;
+    border-radius: 32px;
+    margin-top: -5px;
+}
+
+.button{
+    border-radius: 100px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: $button-enabled;
+}

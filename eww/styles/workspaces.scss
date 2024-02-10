@@ -1,0 +1,26 @@
+.workspaces-widget {
+  // Styles for workspaces-widget class
+}
+
+.workspace-entry {
+  // Styles for workspace-entry class
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.workspace-current {
+    background-color: $accent;
+    border-radius: 1000px;
+}
+
+.workspace-occupied {
+  // Styles for workspace-occupied class
+    color: $contrast_text;
+}
+
+.workspace-empty {
+  // Styles for workspace-empty class
+  color: $text;
+}

@@ -1,0 +1,16 @@
+* {
+    all: unset;
+}
+//Import colors first, then common.
+@import "./styles/colors.scss";
+// @import "./fonts/koulen.scss";
+//@import "./fonts/phosphor.scss";
+@import "./styles/common.scss";
+@import "./styles/status.scss";
+
+//Finally window styling
+@import "./styles/clock.scss";
+@import "./styles/bar.scss";
+@import "./styles/workspaces.scss";
+@import "./styles/center.scss";
+@import "./styles/pomodoro.scss";

@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ $1 == "up" ]; then
+    lightctl up
+elif [ $1 == "down" ]; then
+    lightctl down
+fi

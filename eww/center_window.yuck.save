@@ -1,0 +1,44 @@
+(defwindow center
+    :namespace ""
+    :monitor 0
+    :geometry (geometry :x "6px"
+                        :y "-35px"
+                        :width "33%"
+                        :height "42%"
+                        :anchor "top center")
+    :exclusive false
+    :stacking "fg"
+    :windowtype "dock"
+    :wm-ignore false
+    (box
+        :class "center-window"
+        :orientation "v"
+        :space-evenly false
+        (box
+            :class "center-window-module"
+            :height 35
+            (box
+                :class "center-window-start-module"
+                :space-evenly false
+                :spacing 3
+                :orientation "h"
+                (iconbutton
+                    :name "wifi_1"
+                    :size 33
+                    :class "button-module"
+                    :onclick "notify-send murp hi"
+                )
+                (button
+                    :height "35"
+                    :class "button-module"
+                    :onclick "bash -c 'notify-send -i ~/.local/bin/rickroll.png \"$(rickroll)\"'" 
+                    "MURP"
+                )
+            )
+        )
+        (box
+            :vexpand true
+            :class "center-window-module"
+        )
+    )
+)

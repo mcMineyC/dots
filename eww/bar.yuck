@@ -1,0 +1,86 @@
+(defwindow bar-left
+    :namespace ""
+    :monitor 0
+    :geometry (geometry :x "6px"
+                        :y "-35px"
+                        :width "33%"
+                        :height "35px"
+                        :anchor "top left")
+    :stacking "fg"
+    :windowtype "dock"
+    :wm-ignore false
+    (box
+        :class "t padding"
+        :space-evenly false
+        (box ;Clock on the left
+            :class "foobar"
+            (label
+                :limit-width "5"
+                :class "bar-clock"
+                :xalign "0"
+                :text '${timer.hour}:${time.min}')
+        )
+        (box
+            :class "foobar"
+            (workspaces)
+        )
+    )
+)
+
+(defwindow bar
+    :namespace ""
+    :monitor 0
+    :geometry (geometry :x "0px"
+                        :y "6px"
+                        :height "35px"
+                        :anchor "top center")
+    :exclusive true
+    :stacking "fg"
+    :windowtype "normal"
+    :wm-ignore false
+    (eventbox
+        :onclick "eww open --toggle center"
+        :class "t padding"
+        (box
+            :class "foobar"
+            :halign "end"
+            (label
+                :text "Now with 3% less screen per screen!"
+            )
+        )
+    )
+)
+(defwindow bar-right
+    :namespace ""
+    :monitor 0
+    :geometry (geometry :x "6px"
+                        :y "-35px"
+                        :height "35px"
+                        :anchor "top right")
+    :exclusive true
+    :stacking "fg"
+    :windowtype "dock"
+    :wm-ignore false
+    (box
+        :class "t padding"
+        :space-evenly false
+        (eventbox
+            :onscroll "bash scripts/brightness {}"
+            (box
+                :class "foobar"
+                (label
+                    :limit-width "4"
+                    :class "bar-battery"
+                    :text '${EWW_BATTERY.BAT1.capacity == 99 ? "100%" : "${EWW_BATTERY.BAT1.capacity}%"}')
+            )
+        )
+        (box ;Clock on the right also, for "aesthetic" purposes
+            :class "foobar"
+            (label
+            :limit-width "5"
+            :class "bar-clock"
+            :xalign "0"
+            :text '${timer.hour}:${timer.min}')
+        )
+    )
+)

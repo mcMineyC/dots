@@ -1,0 +1,20 @@
+//$bg: hsl(170, 10%, 11%); 
+//$bg: mix(#121711, #014B6F, 98%);
+// $bg: #ffffff;
+// $bg: #171817;
+$bg: mix(#171817, #17181700, 50%);
+$accent: #102E43;
+$button-enabled: #5292c4;
+$button-disabled: rgb(37,37,37);
+$text: #B5997A;
+$contrast_text: #E05F00;
+$t: rgba(0,0,0,0);
+$tt: rgba(22,22,22,100);
+$surface-darkgrey: #20252b;
+$surface-fg: #949494;
+$surface-lightgrey: #3d464e;
+$surface-grey: #2b3238;
+$surface-red: #f87070;
+
+
+$center-bg: mix($bg, #00000000, 10%);

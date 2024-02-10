@@ -1,0 +1,15 @@
+
+(defwindow clock
+    :monitor 0
+    :geometry (geometry :x "0px"
+                        :y "0px"
+                        :width "33%"
+                        :height "25%"
+                        :anchor "bottom center")
+    :stacking "bg"
+    :windowtype "dock"
+    :wm-ignore true
+    (label 
+        :class "clock"
+        :text '${timer.hour}:${timer.min}')
+)

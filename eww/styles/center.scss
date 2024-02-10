@@ -1,0 +1,56 @@
+// CONFIG
+
+$qt-button-padding: 8px;
+
+
+.center-window {
+    background-color: $t;
+    border-radius: 32px;
+    margin-top: -5px;
+}
+
+.center-window-start-module {
+    // background-color: red;
+    border-radius: 3232px;
+    min-height: 35px;
+    padding: $qt-button-padding;
+    padding-left: $qt-button-padding;
+    padding-right: $qt-button-padding;
+}
+.center-window-module {
+    border-radius: 32px;
+    background-color: $center-bg;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+//WIDGETS
+
+.button-module{
+    transition: background-color 500ms ease;
+    border-radius: 100px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 9px;
+    margin-right: 9px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    min-width: 40px;
+}
+
+.notqt{
+    background-color: mix($bg, #2e2e2e, 40);
+}
+
+.textqt{
+    border-radius: 100px;
+    background-color: mix($bg, #2e2e2e, 40);
+    min-width: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.tile-padding{
+    margin-left: 4px;
+    margin-right: 4px;
+}

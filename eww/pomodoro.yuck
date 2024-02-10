@@ -1,0 +1,34 @@
+(defwindow pomodoro_reminder
+    :monitor 0
+    :geometry (geometry :x "6px"
+                        :y "6px"
+                        :width "33%"
+                        :height "33%"
+                        :anchor "bottom right")
+    (box
+        :class "window"
+        :orientation "v"
+        (box
+            (label
+                :text "Time's up!"
+                :class "pomo-ended"
+            )
+        )
+        (box
+            :space-evenly false
+            :orientation "v"
+            (box
+                :space-evenly false
+                :vexpand true
+                (button
+                    :height 64
+                    :hexpand false
+                    :vexpand true
+                    :class "button pomo-ended-button"
+                    :onclick "eww close pomodoro_reminder"
+                    "OK"
+                )
+            )
+        )
+    )
+)
