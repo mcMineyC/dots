@@ -39,15 +39,16 @@ $qt-button-padding: 8px;
 }
 
 .notqt{
-    background-color: mix($bg, #2e2e2e, 40);
+    background-color: mix(#3e3e3e, #25252500,35%);
 }
 
 .textqt{
     border-radius: 100px;
-    background-color: mix($bg, #2e2e2e, 40);
+    background-color: mix(#3e3e3e, #25252500,35%);
     min-width: 60px;
     padding-left: 20px;
     padding-right: 20px;
+    color: $text
 }
 
 .tile-padding{

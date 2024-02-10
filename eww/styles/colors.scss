@@ -3,11 +3,11 @@
 // $bg: #ffffff;
 // $bg: #171817;
 $bg: mix(#171817, #17181700, 50%);
-$accent: #102E43;
-$button-enabled: #5292c4;
-$button-disabled: rgb(37,37,37);
+$accent: mix(#035CAA,#035CAA00, 50%);
+$button-enabled: mix(#5aaff0, #5aaff000, 75%);
+$button-disabled: mix(#3e3e3e, #25252500,35%);
 $text: #B5997A;
-$contrast_text: #E05F00;
+$contrast_text: #FF8C71;
 $t: rgba(0,0,0,0);
 $tt: rgba(22,22,22,100);
 $surface-darkgrey: #20252b;
@@ -17,4 +17,4 @@ $surface-grey: #2b3238;
 $surface-red: #f87070;
 
 
-$center-bg: mix($bg, #00000000, 10%);
+$center-bg: mix($bg, #00000000, 1%);

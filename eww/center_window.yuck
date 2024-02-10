@@ -31,7 +31,7 @@
                     :name "${btcon > 0 ? 'bluetooth_connected' : 'bluetooth'}"
                     :class ""
                     :onclick "rfkill toggle bluetooth"
-                    :status {rfkill.rfkilldevices[2].soft == 'unblocked'}
+                    :status {rfkill.rfkilldevices[0].soft == 'unblocked'}
                 )
                 (icontile
                     :name "cellular_5g"
@@ -39,11 +39,13 @@
                     :onclick "bash ~/.local/bin/hotspot"
                     :status {(wifi['ssid'] ?: "NONE") == "Wifi"}
                 )
-                (textile
-                    :class ""
-                    :onclick "bash -c 'notify-send -i ~/.local/bin/rickroll.png  \"$(~/.local/bin/rickroll)\" && cvlc --play-and-exit --audio ~/Videos/clip.mp4 --no-video &'" 
-                    :status false
-                    :text "MURP"
+                (eventbox
+                    :class "tile-padding"
+                    :onclick "bash -c 'notify-send -i ~/.local/bin/rickroll.png  \"$(~/.local/bin/rickroll)\" && cvlc --play-and-exit --audio ~/Videos/clip.mp4 --no-video &'"
+                    (label
+                        :class "textqt"
+                        :text "MURP"
+                    )
                 )
                 (box
                     :class "tile-padding"
