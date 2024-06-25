@@ -1,8 +1,8 @@
 (defwindow bar-blur
-    :namespace ""
+    :namespace "bar-blur"
     :monitor 0
     :geometry (geometry :x "0px"
-                        :y "-41px"
+                        :y "-47px"
                         :height "47px"
                         :width  "1920px"
                         :anchor "top center")
@@ -19,7 +19,7 @@
     :namespace ""
     :monitor 0
     :geometry (geometry :x "6px"
-                        :y "-35px"
+                        :y "-41px"
                         :width "33%"
                         :height "35px"
                         :anchor "top left")
@@ -49,7 +49,7 @@
     :monitor 0
     :geometry (geometry :x "0px"
                         :y "6px"
-                        :height "35px"
+                        :height "41px"
                         :anchor "top center")
     :exclusive true
     :stacking "fg"
@@ -59,7 +59,7 @@
         :onclick "eww open --toggle center"
         :class "t padding"
         (box
-            :class "foobar"
+            :class "foobar center-bar"
             :halign "end"
             (label
                 :text "Now with 3% less screen per screen!"
@@ -71,7 +71,7 @@
     :namespace ""
     :monitor 0
     :geometry (geometry :x "6px"
-                        :y "-35px"
+                        :y "-41px"
                         :height "35px"
                         :anchor "top right")
     :exclusive true

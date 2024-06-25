@@ -31,7 +31,7 @@
                     :name "${btcon > 0 ? 'bluetooth_connected' : 'bluetooth'}"
                     :class ""
                     :onclick "rfkill toggle bluetooth"
-                    :status {rfkill.rfkilldevices[0].soft == 'unblocked'}
+                    :status {rfkill.rfkilldevices[2].soft == 'unblocked'}
                 )
                 (icontile
                     :name "cellular_5g"
